@@ -17,8 +17,8 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 })
 export class UsMapComponent {
     @Input() fillLabelColor: string = '#FFFFFF';
-    @Input() fillStateColor: string = '#FF9900';
-    @Input() strokeColor: string = '#000000';
+    @Input() fillStateColor: string = '#D0D0D0';
+    @Input() strokeColor: string = '#8E8E8E';
     @Input() lineColor: string = '#C0C0C0';
 
     @Output('onMapClick') click = new EventEmitter();

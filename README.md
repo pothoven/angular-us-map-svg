@@ -1,14 +1,14 @@
-# UsMapSvg
+# Angular SVG US Map
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.1.
+This package is used to generate US SVG Map and also giving ability to set callback function and some parameters to change fill & stroke color.
+
+![usmap](https://user-images.githubusercontent.com/17896904/28911043-c754c656-784c-11e7-9f2a-47f7304b6811.png)
+
+This is an updated version of [angular4-us-map-svg](https://github.com/bharat20185/angular4-us-map-svg).
 
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
 ## Build
 
@@ -18,10 +18,25 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
+## Accessing Component
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+<pre>&lt;app-us-map&gt;&lt;/app-us-map&gt;</pre>
 
-## Further help
+## API Reference
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### Inputs
+
+|||
+|-|-|
+| `fillLabelColor`      | Type: `string` Optional. Will change color of state name text. For Example: `fillColor="#C0C0C0"`       |
+| `fillStateColor` | Type: `string` Optional. Will change background color of state area. For Example: `fillStateColor="#C0C0C0"` |
+| `strokeColor`    | Type: `string` Optional. Will change border color of state area. For Example: `strokeColor="#C0C0C0"`     |
+| `lineColor`    | Type: `string` Optional. Will change line color for state names outside the map pointing to the state. For Example: `strokeColor="#C0C0C0"`     |
+
+### Output
+|||
+|-|-|
+| `onMapClick` | Will be emitted when state area has been clicked. It returns `state` abbreviation. (onMapClick) event. |
+
+Moreover, you can apply your own CSS to beautify this component.
+
