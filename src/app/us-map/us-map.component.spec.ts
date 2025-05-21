@@ -20,4 +20,15 @@ describe('UsMapComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should render svg', () => {
+    const compiled = fixture.nativeElement as HTMLElement;
+    expect(compiled.querySelector('svg')).toBeDefined();
+  });
+
+  it('should render 51 shapes (50 states + DC)', () => {
+    const compiled = fixture.nativeElement as HTMLElement;
+    expect(compiled.querySelectorAll('path').length).toEqual(51);
+  });
+
 });

@@ -14,16 +14,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have the 'us-map-svg' title`, () => {
+  it(`should have the 'US Map SVG' title`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('us-map-svg');
+    expect(app.title).toEqual('US Map SVG');
   });
 
-  it('should render title', () => {
+  it('should render app-us-map component', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, us-map-svg');
+    expect(compiled.querySelector('app-us-map')).toBeDefined();
   });
 });

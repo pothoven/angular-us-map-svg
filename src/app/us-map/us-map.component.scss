@@ -1,0 +1,10 @@
+.svg-state-group {
+  cursor: pointer;
+
+  &:hover {
+    .svg-state-path, .svg-state-rect {
+    fill: steelblue;
+    }
+  }
+}
+
