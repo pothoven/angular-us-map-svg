@@ -17,7 +17,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 })
 export class UsMapComponent {
     @Input() fillLabelColor = '#FFFFFF';
-    @Input() fillStateColor = '#D0D0D0';
+    @Input() fillStateColor = 'url(#grad1)';
     @Input() strokeColor = '#8E8E8E';
     @Input() lineColor = '#C0C0C0';
 
