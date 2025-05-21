@@ -28,10 +28,10 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 |||
 |-|-|
-| `fillLabelColor`      | Type: `string` Optional. Will change color of state name text. For Example: `fillColor="#C0C0C0"`       |
+| `fillLabelColor`      | Type: `string` Optional. Will change color of state name text. For Example: `fillLabelColor="#C0C0C0"`       |
 | `fillStateColor` | Type: `string` Optional. Will change background color of state area. For Example: `fillStateColor="#C0C0C0"` |
 | `strokeColor`    | Type: `string` Optional. Will change border color of state area. For Example: `strokeColor="#C0C0C0"`     |
-| `lineColor`    | Type: `string` Optional. Will change line color for state names outside the map pointing to the state. For Example: `strokeColor="#C0C0C0"`     |
+| `lineColor`    | Type: `string` Optional. Will change line color for state names outside the map pointing to the state. For Example: `lineColor="#C0C0C0"`     |
 
 ### Output
 |||
