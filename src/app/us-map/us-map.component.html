@@ -3,7 +3,7 @@
   @for (state of states; track $index) {
   <g class="svg-state-group"
     [attr.id]="state.id"
-    (click)="onUsMapClick(state.id)">
+    (click)="onMapClick(state.id)">
 
     <!-- draw the shape of the state -->
     <path class="svg-state-path"

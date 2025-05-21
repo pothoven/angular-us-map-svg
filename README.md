@@ -36,7 +36,7 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 ### Output
 |||
 |-|-|
-| `onMapClick` | Will be emitted when state area has been clicked. It returns `state` abbreviation. (onMapClick) event. |
+| `mapClick` | Will be emitted when state area has been clicked. It returns `state` abbreviation. (mapClick) event. |
 
 Moreover, you can apply your own CSS to beautify this component.
 

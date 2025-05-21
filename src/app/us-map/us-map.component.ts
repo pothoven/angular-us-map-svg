@@ -16,15 +16,15 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
     styleUrl: './us-map.component.scss'
 })
 export class UsMapComponent {
-    @Input() fillLabelColor: string = '#FFFFFF';
-    @Input() fillStateColor: string = '#D0D0D0';
-    @Input() strokeColor: string = '#8E8E8E';
-    @Input() lineColor: string = '#C0C0C0';
+    @Input() fillLabelColor = '#FFFFFF';
+    @Input() fillStateColor = '#D0D0D0';
+    @Input() strokeColor = '#8E8E8E';
+    @Input() lineColor = '#C0C0C0';
 
-    @Output('onMapClick') click = new EventEmitter();
+    @Output() mapClick = new EventEmitter();
 
-    onUsMapClick(state: string) {
-        this.click.emit({ 'state': state });
+    onMapClick(state: string) {
+        this.mapClick.emit({ 'state': state });
     }
 
     // Coordinates for the SVG paths of the US map
