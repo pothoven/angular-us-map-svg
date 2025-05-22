@@ -29,8 +29,8 @@
     <!-- draw the shape of the state -->
     <path class="svg-state-path"
       [attr.d]="state.d"
-      [attr.fill]="fillStateColor"
-      [attr.stroke]="strokeColor">
+      [attr.fill]="stateColor"
+      [attr.stroke]="borderColor">
     </path>
 
     <!-- For states that are too small to put the label in them, the labels are in a separate box with a line pointing to the state -->
@@ -38,8 +38,8 @@
     @if (state.boxX) {
     <!-- draw box for the label -->
     <rect class="svg-state-rect"
-      [attr.fill]="fillStateColor"
-      [attr.stroke]="strokeColor"
+      [attr.fill]="stateColor"
+      [attr.stroke]="borderColor"
       [attr.x]="state.boxX"
       [attr.y]="state.boxY"
       [attr.width]="state.boxW"
@@ -67,7 +67,7 @@
       [attr.y]="state.y"
       text-anchor="middle"
       stroke="none"
-      [attr.fill]="fillLabelColor">
+      [attr.fill]="labelColor">
       <tspan dy="6.5">{{state.id}}</tspan>
     </text>
     }

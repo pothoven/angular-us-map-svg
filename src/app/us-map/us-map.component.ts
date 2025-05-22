@@ -7,6 +7,7 @@
  * The component allows customization of colors for the states and labels.
  *
  */
+
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import usStates from '@assets/us-states.json';
 
@@ -17,9 +18,9 @@ import usStates from '@assets/us-states.json';
     styleUrl: './us-map.component.scss'
 })
 export class UsMapComponent {
-    @Input() fillLabelColor = '#FFFFFF';
-    @Input() fillStateColor = 'url(#grad1)';
-    @Input() strokeColor = '#8E8E8E';
+    @Input() labelColor = '#FFFFFF';
+    @Input() stateColor = 'url(#grad1)';
+    @Input() borderColor = '#8E8E8E';
     @Input() lineColor = '#C0C0C0';
     @Input() hoverColor = '#43C3FD';
     @Input() gradientStops = ['#1F886E', '#177DC1'];

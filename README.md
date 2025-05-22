@@ -28,12 +28,13 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 |||
 |-|-|
-| `gradientStops`  | Type: `Array<string>` Optional. Will change the linear gradient fill colors for the states. For Example: `gradientStops=['#1F886E', '#177DC1']`     |
-| `fillStateColor` | Type: `string` Optional. Will change background color of state area. For Example: `fillStateColor="#C0C0C0"` or to use the linear gradient `fillStateColor="url(#grad1)"` |
-| `fillLabelColor` | Type: `string` Optional. Will change color of state name text. For Example: `fillLabelColor="#C0C0C0"`       |
-| `strokeColor`    | Type: `string` Optional. Will change border color of state area. For Example: `strokeColor="#C0C0C0"`     |
-| `lineColor`      | Type: `string` Optional. Will change line color for state names outside the map pointing to the state. For Example: `lineColor="#C0C0C0"`     |
-| `hoverColor`     | Type: `string` Optional. Will change color for state when mouse hovers over them. For Example: `hoverColor="#43C3FD"`     |
+| `gradientStops`  | Type: `Array<string>` Optional. Sets the linear gradient fill colors for the states (internally named `grad1`).<br>For Example: `gradientStops=['#1F886E', '#177DC1']`     |
+| `stateColor`     | Type: `string` Optional. Sets the background color of state area.<br>For Example: `stateColor="#C0C0C0"` or to use the linear gradient from gradientStops `stateColor="url(#grad1)"` |
+| `labelColor`     | Type: `string` Optional. Sets the color of state name text.<br>For Example: `labelColor="#C0C0C0"`       |
+| `borderColor`    | Type: `string` Optional. Sets the border color of state area.<br>For Example: `borderColor="#C0C0C0"`     |
+| `lineColor`      | Type: `string` Optional. Sets the line color for state names outside the map pointing to the state.<br>For Example: `lineColor="#C0C0C0"`     |
+| `hoverColor`     | Type: `string` Optional. Sets the color for state when mouse hovers over them.<br>For Example: `hoverColor="#43C3FD"`     |
+| `states`     | Type: `any` Optional. JSON data for states to show.<br>The data must minimally contain an `id` attribute for the state identifier and a `d` attribute containing the SVG path of the state shape.<br>It should also contain an `x` and `y` location for the location of the state label (the `id`).<br>If the state shape is too small to contain the label, it may also define `boxX`, `boxY`, `boxW`, and `boxH` attributes (x,y, width, height) to create a separate box to place the label in. When adding an extra box, it would be expected to also add `lineX1`, `lineY1`, `lineX2`, and`lineY2` attributes for a line to connect the state to the box.       |
 
 
 ### Output
