@@ -28,10 +28,13 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 |||
 |-|-|
-| `fillLabelColor`      | Type: `string` Optional. Will change color of state name text. For Example: `fillLabelColor="#C0C0C0"`       |
-| `fillStateColor` | Type: `string` Optional. Will change background color of state area. For Example: `fillStateColor="#C0C0C0"` |
+| `gradientStops`  | Type: `Array<string>` Optional. Will change the linear gradient fill colors for the states. For Example: `gradientStops=['#1F886E', '#177DC1']`     |
+| `fillStateColor` | Type: `string` Optional. Will change background color of state area. For Example: `fillStateColor="#C0C0C0"` or to use the linear gradient `fillStateColor="url(#grad1)"` |
+| `fillLabelColor` | Type: `string` Optional. Will change color of state name text. For Example: `fillLabelColor="#C0C0C0"`       |
 | `strokeColor`    | Type: `string` Optional. Will change border color of state area. For Example: `strokeColor="#C0C0C0"`     |
-| `lineColor`    | Type: `string` Optional. Will change line color for state names outside the map pointing to the state. For Example: `lineColor="#C0C0C0"`     |
+| `lineColor`      | Type: `string` Optional. Will change line color for state names outside the map pointing to the state. For Example: `lineColor="#C0C0C0"`     |
+| `hoverColor`     | Type: `string` Optional. Will change color for state when mouse hovers over them. For Example: `hoverColor="#43C3FD"`     |
+
 
 ### Output
 |||

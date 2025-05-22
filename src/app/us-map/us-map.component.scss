@@ -1,10 +1,12 @@
-.svg-state-group {
-  cursor: pointer;
-
-  &:hover {
-    .svg-state-path, .svg-state-rect {
-    fill: #43C3FD;
-    }
-  }
-}
+// Moved inside SVG in order to allow parameterized hover color
+//
+// .svg-state-group {
+//   cursor: pointer;
+//
+//   &:hover {
+//     .svg-state-path, .svg-state-rect {
+//     fill: #43C3FD;
+//     }
+//   }
+// }
 
