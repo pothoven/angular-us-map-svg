@@ -7,7 +7,12 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "lint": "ng lint"
+    "lint": "ng lint",
+    "docker-build": "docker build -t us-map-svg .",
+    "docker-clean": "docker stop us-map-svg || true ; docker rm us-map-svg || true",
+    "docker-run": "npm run docker-clean && docker run --name us-map-svg -p 8080:80 -d us-map-svg",
+    "docker": "npm run docker-build && npm run docker-run && open http://localhost:8080"
+
   },
   "private": true,
   "dependencies": {
