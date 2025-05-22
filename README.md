@@ -20,8 +20,26 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
+## How to install
+
+<pre>npm i https://github.com/pothoven/ng-us-map-svg</pre>
+
 ## Accessing Component
 
+To use it as a stand-alone component, import the component:
+
+<pre>import { UsMapComponent } from 'us-map-svg/src/app/us-map/us-map.component';</pre>
+
+Then include it in your component's imports:
+
+<pre>
+@Component({
+  ...
+  imports: [UsMapComponent]
+}
+</pre>
+
+Then add it to the component's template:
 <pre>&lt;us-map&gt;&lt;/us-map&gt;</pre>
 
 ## API Reference
