@@ -1,6 +1,8 @@
 # Angular SVG US Map
 
-This package is used to generate a clickable US Map SVG.  An event is emitted providing the ability to set callback function and input parameters allow customizaion of fill & stroke colors. [Try It!](https://stackblitz.com/github/pothoven/angular-us-map-svg)
+This package is used to generate a clickable US Map SVG.  An event is emitted providing the ability to set callback function and input parameters allow customizaion of fill & stroke colors. 
+
+[![Open in Stackblitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/pothoven/angular-us-map-svg)
 
 ![usmap](/src/assets/screenshot.png)
 
