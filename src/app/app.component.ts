@@ -14,7 +14,7 @@
 import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatDialog } from '@angular/material/dialog';
-import { UsMapComponent } from "./us-map/us-map.component";
+import { UsMapComponent } from "../../projects/components/src/lib/us-map/us-map.component";
 import { StateDialogComponent } from './state-dialog/state-dialog.component';
 
 @Component({
