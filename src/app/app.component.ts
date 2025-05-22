@@ -13,8 +13,10 @@
 
 import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { MatDialog } from '@angular/material/dialog';
 import { UsMapComponent } from "./us-map/us-map.component";
-import { MatSnackBar } from '@angular/material/snack-bar';
+import { StateDialogComponent } from './state-dialog/state-dialog.component';
+import statesHash from '@assets/states-hash.json';
 
 @Component({
   selector: 'app-root',
@@ -25,14 +27,26 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 export class AppComponent {
   title = 'US Map SVG';
 
-  readonly snackBar = inject(MatSnackBar);
+  readonly dialog = inject(MatDialog);
 
-  usMapClick({ state } : { state: string }) {
-    this.snackBar.open(`Clicked on ${state}`, 'Close', {
-      duration: 2000,
-      horizontalPosition: 'center',
-      verticalPosition: 'top',
-      panelClass: ['snackbar']
+  /**
+   * usMapClick - do whatever desired when a state is clicked.
+   * In this case, we open a dialog with the state name and some example data.
+   *
+   * @param event: { state: string } - The event emitted from the map component.
+   */
+  usMapClick({ state }: { state: keyof typeof statesHash }) {
+    const dialogRef = this.dialog.open(StateDialogComponent, {
+      width: '90vw',
+      data: {
+        state,
+        name: statesHash[state],
+        stateData: `Data for ${statesHash[state]} goes here` } // Example data
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed', result);
+      // Handle the result from the dialog
     });
   }
 }
