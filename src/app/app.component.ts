@@ -16,7 +16,6 @@ import { CommonModule } from '@angular/common';
 import { MatDialog } from '@angular/material/dialog';
 import { UsMapComponent } from "./us-map/us-map.component";
 import { StateDialogComponent } from './state-dialog/state-dialog.component';
-import statesHash from '@assets/states-hash.json';
 
 @Component({
   selector: 'app-root',
@@ -35,13 +34,10 @@ export class AppComponent {
    *
    * @param event: { state: string } - The event emitted from the map component.
    */
-  usMapClick({ state }: { state: keyof typeof statesHash }) {
+  usMapClick({ state }: { state: string }) {
     const dialogRef = this.dialog.open(StateDialogComponent, {
       width: '90vw',
-      data: {
-        state,
-        name: statesHash[state],
-        stateData: `Data for ${statesHash[state]} goes here` } // Example data
+      data: { state },
     });
 
     dialogRef.afterClosed().subscribe(result => {
