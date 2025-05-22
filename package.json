@@ -12,9 +12,7 @@
     "docker-clean": "docker stop us-map-svg || true ; docker rm us-map-svg || true",
     "docker-run": "npm run docker-clean && docker run --name us-map-svg -p 8080:80 -d us-map-svg",
     "docker": "npm run docker-build && npm run docker-run && open http://localhost:8080"
-
   },
-  "private": true,
   "dependencies": {
     "@angular/animations": "^19.2.11",
     "@angular/cdk": "^19.2.17",
