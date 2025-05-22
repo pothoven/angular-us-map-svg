@@ -12,7 +12,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 import usStates from '@assets/us-states.json';
 
 @Component({
-    selector: 'app-us-map',
+    selector: 'us-map',
     imports: [],
     templateUrl: './us-map.component.html',
     styleUrl: './us-map.component.scss'

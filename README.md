@@ -1,4 +1,4 @@
-# Angular SVG US Map
+# Angular US Map SVG
 
 This package is used to generate a clickable US Map SVG.  An event is emitted providing the ability to set callback function and input parameters allow customizaion of fill & stroke colors. 
 
@@ -22,7 +22,7 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 ## Accessing Component
 
-<pre>&lt;app-us-map&gt;&lt;/app-us-map&gt;</pre>
+<pre>&lt;us-map&gt;&lt;/us-map&gt;</pre>
 
 ## API Reference
 

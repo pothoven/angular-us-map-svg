@@ -20,10 +20,10 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('US Map SVG');
   });
 
-  it('should render app-us-map component', () => {
+  it('should render us-map component', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('app-us-map')).toBeDefined();
+    expect(compiled.querySelector('us-map')).toBeDefined();
   });
 });
