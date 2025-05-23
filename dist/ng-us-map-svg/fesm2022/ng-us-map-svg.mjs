@@ -102,7 +102,7 @@ const usStates = [
 ];
 
 /*
- * Public API Surface of NgUsMapSvg
+ * Public API Surface of ng-us-map-svg
  */
 
 /**

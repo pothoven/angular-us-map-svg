@@ -108,7 +108,7 @@
         }
       }
     },
-    "NgUsMapSvg": {
+    "ng-us-map-svg": {
       "projectType": "library",
       "root": "projects/ng-us-map-svg",
       "sourceRoot": "projects/ng-us-map-svg/src",

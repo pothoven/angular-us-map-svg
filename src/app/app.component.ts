@@ -2,7 +2,7 @@
  * Clickable US Map SVG
  *
  * This is a simple Angular application that demonstrates the usage of the
- * NgUsMapSvg component.  It imports the component and uses it in the template.
+ * ng-us-map-svg component.  It imports the component and uses it in the template.
  *
  * The component is designed to be reusable and customizable. It allows you to
  * display a clickable US map using SVG paths for each state. The map is
@@ -22,7 +22,9 @@
 import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatDialog } from '@angular/material/dialog';
-import { UsMapComponent } from 'NgUsMapSvg';
+// import { UsMapComponent } from 'ng-us-map-svg';
+// use the local version of the component
+import { UsMapComponent } from '../../projects/ng-us-map-svg/src/lib/us-map/us-map.component'
 import { StateDialogComponent } from './state-dialog/state-dialog.component';
 
 @Component({

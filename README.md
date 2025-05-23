@@ -1,8 +1,8 @@
 # Angular US Map SVG
 
-This package provides the `NgUsMapSvg` component that can be used to generate a clickable US Map SVG.  An event is emitted providing the ability to set callback function and input parameters allow customizaion of fill & stroke colors. 
+This package provides the `ng-us-map-svg` component that can be used to generate a clickable US Map SVG.  An event is emitted providing the ability to set callback function and input parameters allow customizaion of fill & stroke colors. 
 
-The included sample Angular application demonstrates the usage of the NgUsMapSvg component.  It imports the component and uses it in the template.
+The included sample Angular application demonstrates the usage of the ng-us-map-svg component.  It imports the component and uses it in the template.
 
 The component is designed to be reusable and customizable. It allows you to display a clickable US map using SVG paths for each state. The map is interactive, and when a state is clicked, it emits an event with the state name. The component can be easily integrated into any Angular application.
 
@@ -28,15 +28,13 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 ## How to install
 
-Until I publish this to a npm library, it can be installed from the GitHub repository.
-
-<pre>npm i https://github.com/pothoven/ng-us-map-svg</pre>
+<pre>npm i ng-us-map-svg</pre>
 
 ## Accessing Component
 
 To use it as a stand-alone component, import the component:
 
-<pre>import { UsMapComponent } from 'us-map-svg/dist/ng-us-map-svg';</pre>
+<pre>import { UsMapComponent } from 'ng-us-map-svg';</pre>
 
 Then include it in your component's imports:
 
@@ -48,7 +46,7 @@ Then include it in your component's imports:
 </pre>
 
 Then add it to the component's template:
-<pre>&lt;us-map&gt;&lt;/us-map&gt;</pre>
+<pre>&lt;us-map (mapClick)="myFunction($event)"&gt;&lt;/us-map&gt;</pre>
 
 ## API Reference
 
