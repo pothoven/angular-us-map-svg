@@ -27,8 +27,8 @@
       "@assets/*": [
         "./src/assets/*"
       ],
-      "components": [
-        "./dist/components"
+      "ng-us-map-svg": [
+        "./dist/ng-us-map-svg"
       ]
     },
   },

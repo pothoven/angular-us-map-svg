@@ -2,11 +2,7 @@
 
 This package provides the `ng-us-map-svg` component that can be used to generate a clickable US Map SVG.  An event is emitted providing the ability to set callback function and input parameters allow customizaion of fill & stroke colors. 
 
-The included sample Angular application demonstrates the usage of the ng-us-map-svg component.  It imports the component and uses it in the template.
-
 The component is designed to be reusable and customizable. It allows you to display a clickable US map using SVG paths for each state. The map is interactive, and when a state is clicked, it emits an event with the state name. The component can be easily integrated into any Angular application.
-
-When a state is clicked, a dialog is opened, displaying the state name and some example data (Wikipedia page for the state). The dialog is created using Angular Material's MatDialog component, and it can be customized to show any content you want.
 
 [![Open in Stackblitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/pothoven/angular-us-map-svg)
 
@@ -20,7 +16,7 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The appli
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Run `ng build ng-us-map-svg` to build the component library. The build artifacts will be stored in the `dist/ng-us-map-svg` directory.
 
 ## Running unit tests
 

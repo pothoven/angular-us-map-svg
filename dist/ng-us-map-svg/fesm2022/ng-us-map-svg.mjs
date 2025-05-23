@@ -102,7 +102,7 @@ const usStates = [
 ];
 
 /*
- * Public API Surface of components
+ * Public API Surface of ng-us-map-svg
  */
 
 /**
@@ -110,4 +110,4 @@ const usStates = [
  */
 
 export { UsMapComponent };
-//# sourceMappingURL=components.mjs.map
+//# sourceMappingURL=ng-us-map-svg.mjs.map

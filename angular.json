@@ -108,23 +108,23 @@
         }
       }
     },
-    "components": {
+    "ng-us-map-svg": {
       "projectType": "library",
-      "root": "projects/components",
-      "sourceRoot": "projects/components/src",
+      "root": "projects/ng-us-map-svg",
+      "sourceRoot": "projects/ng-us-map-svg/src",
       "prefix": "lib",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
-            "project": "projects/components/ng-package.json"
+            "project": "projects/ng-us-map-svg/ng-package.json"
           },
           "configurations": {
             "production": {
-              "tsConfig": "projects/components/tsconfig.lib.prod.json"
+              "tsConfig": "projects/ng-us-map-svg/tsconfig.lib.prod.json"
             },
             "development": {
-              "tsConfig": "projects/components/tsconfig.lib.json"
+              "tsConfig": "projects/ng-us-map-svg/tsconfig.lib.json"
             }
           },
           "defaultConfiguration": "production"
@@ -132,7 +132,7 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "tsConfig": "projects/components/tsconfig.spec.json",
+            "tsConfig": "projects/ng-us-map-svg/tsconfig.spec.json",
             "polyfills": [
               "zone.js",
               "zone.js/testing"
@@ -143,10 +143,10 @@
           "builder": "@angular-eslint/builder:lint",
           "options": {
             "lintFilePatterns": [
-              "projects/components/**/*.ts",
-              "projects/components/**/*.html"
+              "projects/ng-us-map-svg/**/*.ts",
+              "projects/ng-us-map-svg/**/*.html"
             ],
-            "eslintConfig": "projects/components/eslint.config.js"
+            "eslintConfig": "projects/ng-us-map-svg/eslint.config.js"
           }
         }
       }
