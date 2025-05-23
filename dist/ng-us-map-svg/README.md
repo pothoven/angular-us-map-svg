@@ -1,63 +1,86 @@
-# Components
+# Angular US Map SVG
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.0.
+This package provides the `NgUsMapSvg` component that can be used to generate a clickable US Map SVG.  An event is emitted providing the ability to set callback function and input parameters allow customizaion of fill & stroke colors. 
 
-## Code scaffolding
+The component is designed to be reusable and customizable. It allows you to display a clickable US map using SVG paths for each state. The map is interactive, and when a state is clicked, it emits an event with the state name. The component can be easily integrated into any Angular application.
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+[![Open in Stackblitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/pothoven/angular-us-map-svg)
 
-```bash
-ng generate component component-name
-```
+![usmap](/src/assets/screenshot.png)
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+This is an updated version of [angular4-us-map-svg](https://github.com/bharat20185/angular4-us-map-svg).
 
-```bash
-ng generate --help
-```
+## Development server
 
-## Building
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-To build the library, run:
+## Build
 
-```bash
-ng build ng-us-map-svg
-```
-
-This command will compile your project, and the build artifacts will be placed in the `dist/` directory.
-
-### Publishing the Library
-
-Once the project is built, you can publish your library by following these steps:
-
-1. Navigate to the `dist` directory:
-   ```bash
-   cd dist/ng-us-map-svg
-   ```
-
-2. Run the `npm publish` command to publish your library to the npm registry:
-   ```bash
-   npm publish
-   ```
+Run `ng build ng-us-map-svg` to build the component library. The build artifacts will be stored in the `dist/ng-us-map-svg` directory.
 
 ## Running unit tests
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-```bash
-ng test
-```
+## How to install
 
-## Running end-to-end tests
+Until I publish this to a npm library, it can be installed from the GitHub repository.
 
-For end-to-end (e2e) testing, run:
+<pre>npm i https://github.com/pothoven/ng-us-map-svg</pre>
 
-```bash
-ng e2e
-```
+## Accessing Component
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+To use it as a stand-alone component, import the component:
 
-## Additional Resources
+<pre>import { UsMapComponent } from 'us-map-svg/dist/ng-us-map-svg';</pre>
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Then include it in your component's imports:
+
+<pre>
+@Component({
+  ...
+  imports: [UsMapComponent]
+}
+</pre>
+
+Then add it to the component's template:
+<pre>&lt;us-map&gt;&lt;/us-map&gt;</pre>
+
+## API Reference
+
+### Inputs
+
+|||
+|-|-|
+| `gradientStops`  | Type: `Array<string>` Optional. Sets the linear gradient fill colors for the states (internally named `grad1`).<br>For Example: `gradientStops=['#1F886E', '#177DC1']`     |
+| `stateColor`     | Type: `string` Optional. Sets the background color of state area.<br>For Example: `stateColor="#C0C0C0"` or to use the linear gradient from gradientStops `stateColor="url(#grad1)"` |
+| `labelColor`     | Type: `string` Optional. Sets the color of state name text.<br>For Example: `labelColor="#C0C0C0"`       |
+| `borderColor`    | Type: `string` Optional. Sets the border color of state area.<br>For Example: `borderColor="#C0C0C0"`     |
+| `lineColor`      | Type: `string` Optional. Sets the line color for state names outside the map pointing to the state.<br>For Example: `lineColor="#C0C0C0"`     |
+| `hoverColor`     | Type: `string` Optional. Sets the color for state when mouse hovers over them.<br>For Example: `hoverColor="#43C3FD"`     |
+| `states`     | Type: `any` Optional. JSON data for states to show.<br>The data must minimally contain an `id` attribute for the state identifier and a `d` attribute containing the SVG path of the state shape.<br>It should also contain an `x` and `y` location for the location of the state label (the `id`).<br>If the state shape is too small to contain the label, it may also define `boxX`, `boxY`, `boxW`, and `boxH` attributes (x,y, width, height) to create a separate box to place the label in. When adding an extra box, it would be expected to also add `lineX1`, `lineY1`, `lineX2`, and`lineY2` attributes for a line to connect the state to the box.       |
+
+
+### Output
+
+|||
+|-|-|
+| `mapClick`  | Will be emitted when a state area has been clicked. It returns the `state` abbreviation in the (mapClick) event. |
+
+In order to perform actions based on map clicks, attach your event handler to the `mapClick` event.
+
+<pre>&lt;us-map (mapClick)="myFunction($event)"&gt;&lt;/us-map&gt;</pre>
+
+### Styling
+
+Apply your own CSS to beautify this component.
+
+|||
+|-|-|
+| `svg-state-group`  | Class associated with SVG `g` elements that encapsulate the state border, label, and any additional parts. |
+| `svg-state-path`   | Class associated with SVG `path` elements that draw the state borders. |
+| `svg-state-label`  | Class associated with the SVG `text` elements that show each state abbreviation.  |
+| `svg-state-rect`   | Class associated with the SVG `rect` elements that encapsulate the state label for small states. |
+| `svg-state-line`   | Class associated with SVG `line` elements that connect the state rectangles to the state. |
+
+

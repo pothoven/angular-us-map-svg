@@ -1,5 +1,5 @@
 /*
- * Public API Surface of ng-us-map-svg
+ * Public API Surface of NgUsMapSvg
  */
 
 export * from './lib/us-map/us-map.component';
