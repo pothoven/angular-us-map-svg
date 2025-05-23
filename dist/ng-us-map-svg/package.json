@@ -1,6 +1,25 @@
 {
   "name": "ng-us-map-svg",
-  "version": "0.0.1",
+  "version": "1.0.1",
+  "description": "A standalone Angular component for displaying an interactive US map in SVG.",
+  "author": {
+    "name": "Steven Pothoven",
+    "email": "steven@pothoven.net",
+    "url": "https://stevenpothoven.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pothoven/ng-us-map-svg"
+  },
+  "homepage": "https://github.com/pothoven/ng-us-map-svg",
+  "keywords": [
+    "angular",
+    "svg",
+    "map",
+    "us",
+    "interactive",
+    "component"
+  ],
   "peerDependencies": {
     "@angular/common": "^19.2.0",
     "@angular/core": "^19.2.0"
